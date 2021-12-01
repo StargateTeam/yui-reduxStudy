@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import { addNumber, subNumber } from './redux/Calculator/action'
-import { StateType } from './redux/store'
-import styled from '@emotion/styled'
+import { useSelector, useDispatch } from 'react-redux';
+import { addNumber, subNumber } from './redux/Calculator/action';
+import { StateType } from './redux/store';
+import styled from '@emotion/styled';
 
 export const App = () => {
   const number = useSelector((state: StateType) => state.number);
@@ -10,10 +10,10 @@ export const App = () => {
 
   const Increase = () => {
     dispatch(addNumber());
-  }
+  };
   const Decrease = () => {
     dispatch(subNumber());
-  }
+  };
   return (
     <Section className="App">
       <Number>{number}</Number>
@@ -23,7 +23,7 @@ export const App = () => {
       </ButtonSection>
     </Section>
   );
-}
+};
 const Section = styled.div`
   width: 100%;
   height: 100%;
@@ -32,7 +32,7 @@ const Section = styled.div`
   align-items: center;
   flex-direction: column;
 `;
-const Number = styled.div` 
+const Number = styled.div`
   margin: 20px;
   font-size: 50px;
 `;
@@ -42,5 +42,3 @@ const ButtonSection = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-
